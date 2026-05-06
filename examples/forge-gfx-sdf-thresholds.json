@@ -1,0 +1,17 @@
+{
+  "repo": "forge-gfx-sdf-flow",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 194,
+    "watch": 110
+  },
+  "terms": [
+    "geometry span",
+    "atlas pressure",
+    "shader drift",
+    "render budget"
+  ]
+}
