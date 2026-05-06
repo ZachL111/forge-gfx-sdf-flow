@@ -1,0 +1,73 @@
+{
+  "repo": "forge-gfx-sdf-flow",
+  "language": "Dart",
+  "category": "Graphics",
+  "goal": "Design a Dart verification harness for sdf systems, covering visual model generation, layout fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "geometry span",
+      "atlas pressure",
+      "shader drift",
+      "render budget"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "geometry span",
+      "signal": 65,
+      "slack": 20,
+      "drag": 19,
+      "confidence": 50,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "atlas pressure",
+      "signal": 61,
+      "slack": 52,
+      "drag": 19,
+      "confidence": 71,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "shader drift",
+      "signal": 58,
+      "slack": 48,
+      "drag": 14,
+      "confidence": 51,
+      "score": 173,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "render budget",
+      "signal": 60,
+      "slack": 50,
+      "drag": 8,
+      "confidence": 46,
+      "score": 192,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "geometry span",
+      "signal": 58,
+      "slack": 30,
+      "drag": 28,
+      "confidence": 45,
+      "score": 107,
+      "lane": "watch"
+    }
+  ]
+}
